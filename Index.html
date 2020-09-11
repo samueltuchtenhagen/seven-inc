@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Gerenciamento de empregados</title>
+  
+      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+      
+      <link rel="stylesheet" href="css/style.css">
+      
+    </head>
+  
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+class Employees{
+      constructor(id,na,bo,sa,po){
+        this.id = id
+        this.name = na
+        this.bornDate = bo
+        this.salary = sa
+        this.position = po
+      }
+        
+    }
+    MenuPrincipal();
+    function menu(p){
+      let elemento = p
+        
+      ReactDOM.render(elemento, document.getElementById('root')); 
+    }
+    function MenuPrincipal(){
+    
+      let p =
+        <div>
+          <h1>Gerenciar Empregados</h1>
+          <button onClick={BuscarId}>Buscar por matricula</button><br/>
+          <button onClick={Listar}>Listar Empregados</button><br/>
+          <button onClick={Cadastrar}>cadastrar Empregados</button><br/>
+          <button onClick={EditarEmpregado}>Editar Empregados</button><br/>
+          <button onClick={DeletarEmpregado}>Deletar Empregado</button>
+        </div>
+      return menu(p);
+    }
+    function Cadastrar(){
+      let p =  
+        <div>
+          <h3>EMPREGADO</h3>
+            <p>Matricula</p>
+            <input type="text" id="id"/><br/>
+            <p>Nome:</p><input type="text" id="name"/><br/>
+            <p>Data De nascimento</p><input type="number" id="bornDate"/>
+            <p>Salário</p><input type="number" id="salary" step='0.01'/>
+            <p>Cargo</p><input type="text" id="position"/><br/><br/>
+            <input type="button" value="Cadastrar"/>
+            <p onClick={MenuPrincipal}>Voltar</p>
+        </div>
+      return menu(p)
+    }
+    function BuscarId(){
+    let p = <div>
+      <p>Digite a matricula do empregado</p>
+        <input type="text" /><br/><br/>
+        <input type="button" value="Buscar"/><br/>
+        <p onClick={MenuPrincipal}>Voltar</p>
+        </div>  
+        return menu(p)
+    }
+    function EditarEmpregado(){
+      let p = <div><p>Digite a matricula do empregado</p>
+        <input type="text"/><br/><br/>
+        <input type="button" value="Editar"/><br/>
+        <p onClick={MenuPrincipal}>Voltar</p></div>
+        return menu(p)
+    }
+    
+    function DeletarEmpregado(){
+      let p = <div>
+        <p>Digite a matricula do empregado</p>
+        <input type="text"/><br/><br/>
+        <input type="button" value="Deletar"/><br/>
+        <p onClick={MenuPrincipal}>Voltar</p></div>
+      return menu(p)
+    }
+    function Listar(){
+      let p = <div></div>
+  }
+
+// Declarei a variável "p" para ser usada como um parametro simples para levar os sub-menus aos caminhos do menu principal.
+</script>
+    
+</body>
+</html>
