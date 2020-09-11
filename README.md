@@ -11,4 +11,5 @@
 Anotações:
 
 1 -> fiz um css básico como um escopo inicial para ser alterado no futuro.
+
 2 -> embora os gatilhos estejam prontos e a parte visual mínina esteja funcionando, a ainda não tive tempo hábil para estudar a fundo como fazer a interligação do html com a classe criada..
